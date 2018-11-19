@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Temperature(doC) {
+        this.doC = doC;
+        this.getDoC = function () {
+            return this.doC;
+        }
+        this.setDoC = function (c) {
+            this.doC = c;
+        }
+        this.getDoF = function () {
+            return ((this.doC *9)/5 + 32);
+        }
+        this.getDoK = function () {
+            return (this.doC +  273.15);
+        }
+    }
+    var temperature = new Temperature(25);
+    var doF = temperature.getDoF();
+    var doK = temperature.getDoK();
+    document.write("gia tri do f: " + doF + "<br/>");
+    document.write("gia tri do k: " + doK);
+
+</script>
+
+</body>
+</html>
